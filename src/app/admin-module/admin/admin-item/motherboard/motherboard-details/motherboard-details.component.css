@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+.project-info-box {
+    margin: 15px ;
+    padding: 30px 40px;
+  }
+  
+  
+  img {
+      width: 500px;
+      height: 400px;
+  
+  }
+  
+  button {
+    margin-left: 50px;
+  }
+  
+  h6 ,h4 , h3{
+    color: aliceblue;
+  }
+
+  .btn-outline-primary , .btn-outline-danger {
+    font-size: 20px;
+    width : 150px;
+  }
+
+  [data-aos="fade-down"] {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  [data-aos="fade-down"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }

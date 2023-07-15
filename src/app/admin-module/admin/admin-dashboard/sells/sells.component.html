@@ -1,0 +1,130 @@
+<br><br><br><br><br>
+<h1 class="title"> Device Sales Checking </h1>
+<br><br>
+<div class="container" data-aos="fade-up">
+     <div class="row">
+        <div class="col-xl-5"> <div class="group">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                <g>
+                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                </g>
+            </svg>
+            <input class="input" type="text" placeholder="Find item.." [(ngModel)]="searchName" (input)="filterSells()">
+        </div>
+
+
+         </div>
+        <div class="col-xl-3"> 
+            <input class="inputs" name="startDate" placeholder="Start date..." type="date"  (input)="filterSells()" [(ngModel)]="startDate">>    
+        </div>
+
+
+        <div class="col-xl-3"> 
+            <input class="inputs" name="endDate" placeholder="End date..." type="date"  (input)="filterSells()" [(ngModel)]="endDate">
+        </div>
+    </div> 
+
+
+    
+      
+   
+
+    <br><br>
+
+    <div class="row">
+
+        <div class="col-xl-4">
+            <ng-container *ngIf="filteredSellsItem">
+              <table>
+                <tr>
+                  <td class="t1">Device Name</td>
+                  <td class="t2">{{ filteredSellsItem?.name }}</td>
+                </tr>
+                <tr>
+                  <td class="t1">Unit price</td>
+                  <td class="t2">Rs {{ filteredSellsItem?.price }}</td>
+                </tr>
+                <tr>
+                  <td class="t1">Total quantity</td>
+                  <td class="t2">{{ filteredSellsItem?.totalQuantity }}</td>
+                </tr>
+                <tr>
+                  <td class="t1">Total price</td>
+                  <td class="t2">Rs {{ filteredSellsItem?.totalPrice }}</td>
+                </tr>
+              </table>
+            </ng-container>
+            <ng-container *ngIf="!filteredSellsItem">
+                <table>
+                    <tr>
+                      <td class="t1">Device Name</td>
+                      <td class="t2">Selecte Device</td>
+                    </tr>
+                    <tr>
+                      <td class="t1">Unit price</td>
+                      <td class="t2">  --- </td>
+                    </tr>
+                    <tr>
+                      <td class="t1">Total quantity</td>
+                      <td class="t2"> --- </td>
+                    </tr>
+                    <tr>
+                      <td class="t1">Total price</td>
+                      <td class="t2">---</td>
+                    </tr>
+                  </table>
+            </ng-container>
+
+
+              <br><br><br><br>
+
+              
+                <div class="col-xl-12">
+                  <button class="export-button" (click)="exportToExcel()">Export to Excel</button>
+                </div>
+           
+
+
+
+
+        </div>
+
+     
+    
+         
+          
+
+        <div class="col-xl-8">
+
+            <table>
+
+                <tr>
+                    <th> Name</th>
+                    <th> Date</th>
+                    <th> Price </th>
+                    <th class="qnt"> quntity </th>
+                    <th> sub total </th>
+                </tr>
+               
+                <tr *ngFor="let sells of filteredSells"  (click)="selectItem(sells)">
+                    <td>{{sells.name}}</td>
+                    <td>{{sells.date}}</td>
+                    <td> {{sells.price}} </td>
+                    <td class="qnts">{{sells.qnt}} </td>
+                    <td>{{ sells.price * sells.qnt}}</td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+
+    </div>
+
+
+    <br><br><br><br>
+   
+</div>
+
+

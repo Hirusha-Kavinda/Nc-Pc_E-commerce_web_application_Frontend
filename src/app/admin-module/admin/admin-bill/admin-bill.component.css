@@ -1,0 +1,36 @@
+.bill{
+
+    width: 80%;
+    min-height:  600px;
+    background-color: aliceblue;
+    border-style: double;
+    border-spacing: 20px ;
+    padding: 5%;
+}
+
+
+.titleimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+}
+
+
+.wadana{
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+
+.finishing{
+
+ margin-top: 160px;   
+ text-align: center;
+}
+
+
+
+
+

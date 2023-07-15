@@ -1,0 +1,50 @@
+<br><br><br><br><br>
+
+<h1> Customer Details</h1>
+
+<br><br>
+<input type="text" [(ngModel)]="searchNIC" class="input"  (input)="filterNICDetails()" placeholder="Search by NIC number">
+<br><br>
+
+  <div class="customer" *ngFor="let nicDetail of filteredNICDetails" data-aos="fade-right">
+    <div class="row" >
+        <div class="col-md-6">
+        <table class="details">
+            <tr><td><h5>Name :</h5></td>
+                <td><h5>{{ nicDetail.order.name }}</h5></td></tr>
+            <tr><td><h5>Email:</h5></td><td><h5>{{ nicDetail.order.email }}</h5></td></tr>
+            <tr><td><h5>Address :</h5></td><td><h5>{{ nicDetail.order.address }}</h5></td></tr>
+            <tr><td><h5>Mobile :</h5></td><td><h5>{{ nicDetail.order.phoneNumber }}</h5></td></tr>
+            <tr><td><h5>Nic :</h5></td><td><h5>{{ nicDetail.nic }}</h5></td></tr>
+          
+    </table>
+</div>   
+
+<div class="col-md-6">
+    <table class="count">
+     <tr>
+        <th><h5>Pending orders</h5></th>
+        <th><h5>{{ nicDetail.pendingCount }}</h5></th>
+     </tr>
+     
+     <tr>
+        <th><h5>Confirmed Orders</h5></th>
+        <th><h5>{{ nicDetail.confirmedCount }}</h5></th>
+     </tr>
+     
+     <tr>
+        <th><h5>Cancle Orders</h5></th>
+        <th><h5>{{ nicDetail.canceledCount }}</h5></th>
+     </tr>  
+     
+     <tr>
+        <th><h5>All Orders</h5></th>
+        <th><h5>{{ nicDetail.count }}</h5></th>
+     </tr>
+    
+     </table>
+    </div>
+  </div>
+  </div>
+  
+  

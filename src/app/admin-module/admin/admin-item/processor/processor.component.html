@@ -1,0 +1,28 @@
+<br><br><br><br>
+<button class="addNew" (click)="addNewProcessor()">ADD NEW PROCESSOR</button>
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+<div class="container">
+        
+        <div class="row justify-content-center">
+            <div  *ngFor="let processor of processor"  class="col-md-6 col-lg-3 " >
+                <div class="team-item"  data-aos="fade-up" >
+                    <div class="mb-20 position-relative d-flex align-items-center">
+            
+                        <span class="img-holder d-inline-block">
+                                <img src="{{ processor.imageUrl}}" alt="Team" width="200px" height="200px" (click)="ProcessorDetails(processor.id)">
+                            </span>
+                    </div>
+                    <div class="team-content">
+                        <h5 class="mb-2">{{processor.name}}</h5>
+                        <p class="text-uppercase mb-0">Rs {{processor.price}}</p>
+                    </div>
+                    <br>
+                    <button (click)= "updateProcessor(processor.id)"  class="btn btn-outline-primary" ><i class="fa fa-pencil"></i></button>
+                    <button (click)= "DeleteBox(processor.id)"  class = "btn btn-outline-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                  
+                </div>
+            </div>
+
+

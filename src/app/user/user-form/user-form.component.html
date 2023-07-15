@@ -1,0 +1,166 @@
+<!-- <body style="background-color: #282928"> -->
+	<div class="popup-overlay" [ngClass]="{'show': showPopup}"></div>
+	<app-user-navbar></app-user-navbar>
+<body>
+<br><br><br><br><br>
+
+<div class="container" data-aos="fade-down">
+    <div class="col-xl-8">
+		<div class="card">
+			<div class="card2">
+    						
+							<form [formGroup]="formGroup" (ngSubmit)="onFormSubmit() ">
+								
+								<br>
+								<h3 class="title">Customer Details Form</h3>
+
+								<div class="form-group" [ngClass]="{'error-input':formGroup.get('name')?.invalid && formGroup.get('name')?.touched}" for="name">
+									<label class="lable">Full Name</label>
+									 <div class="col-lg-10">
+										<input type="text" class="input" formControlName="name"  [(ngModel)]="formData.name" name="name" placeholder="Enter full name">
+										<div *ngIf="formGroup.get('name')?.invalid && formGroup.get('name')?.touched" class="error-message">
+											<span *ngIf="formGroup.get('name')?.errors?.['required']">Full Name is required.</span>
+											<span *ngIf="formGroup.get('name')?.errors?.['invalidName']">Invalid name format.</span>
+											<span *ngIf="formGroup.get('name')?.errors?.['insufficientWords']">Full Name is required</span>
+										  </div>
+									</div>
+									
+								</div> 
+								
+					  
+								<div class="form-group" [ngClass]="{'error-input':formGroup.get('nic')?.invalid && formGroup.get('nic')?.touched}" >
+									<label class="lable">NIC number</label>
+									<div class="col-lg-10">
+										<input type="text" class="input" id="nic"  formControlName="nic" [(ngModel)]="formData.nic" name="nic"  placeholder="Enter i.d number"> 
+										<div *ngIf="formGroup.get('nic')?.invalid && formGroup.get('nic')?.touched" class="error-message">
+											<span *ngIf="formGroup.get('nic')?.errors?.['required']">NIC number is required.</span>
+											<span *ngIf="formGroup.get('nic')?.errors?.['invalidNIC']">Invalid NIC number format.</span>
+										  </div>
+									</div>
+								</div>
+								
+								
+								<div class="form-group" [ngClass]="{'error-input':formGroup.get('email')?.invalid && formGroup.get('email')?.touched}" >
+									<label class="lable">Email</label>
+									<div class="col-lg-10">
+										<input type="email" class="input" id="email" formControlName="email" [(ngModel)]="formData.email" name="email" required placeholder="Enter Email "> 
+										<div *ngIf="formGroup.get('email')?.invalid && formGroup.get('email')?.touched" class="error-message">
+											<span *ngIf="formGroup.get('email')?.errors?.['required']">Email is required.</span>
+											<span *ngIf="formGroup.get('email')?.errors?.['email']">Invalid email format.</span>
+											<span *ngIf="formGroup.get('email')?.errors?.['invalidEmail']">Email must contain the '@' symbol and a valid domain.</span>
+											<span *ngIf="formGroup.get('email')?.errors?.['invalidDomain']">Invalid domain. Only 'gmail.com' is allowed.</span>
+											<span *ngIf="formGroup.get('email')?.errors?.['invalidLocalPart']">Invalid characters in the local part of the email.</span>
+										  </div>
+									</div>
+								</div>
+
+								<div class="form-group" [ngClass]="{'error-input':formGroup.get('address')?.invalid && formGroup.get('address')?.touched}" >
+									<label class="lable">address</label>
+									<div class="col-lg-10">
+									<input type="address" class="input"  formControlName="address" [(ngModel)]="formData.address" id="address" name="address" required  placeholder="Enter address">
+									<div *ngIf="formGroup.get('address')?.invalid && formGroup.get('address')?.touched" class="error-message">
+										<span *ngIf="formGroup.get('address')?.errors?.['required']">Address is required.</span>
+										<span *ngIf="formGroup.get('address')?.errors?.['invalidAddress']">Invalid address format.</span>
+									  </div>     
+								    </div>
+								  </div>
+								
+
+								<div class="form-group" [ngClass]="{'error-input':formGroup.get('mobileNumber')?.invalid && formGroup.get('mobileNumber')?.touched}" >
+									<label class="lable">Mobile number</label>
+									<div class="col-lg-10">
+										<input type="text" class="input" id="mobileNumber"  formControlName="mobileNumber" [(ngModel)]="formData.phoneNumber" name="mobileNumber" required placeholder="Enter mobile number"> 
+										<div *ngIf="formGroup.get('mobileNumber')?.invalid && formGroup.get('mobileNumber')?.touched" class="error-message">
+											<span *ngIf="formGroup.get('mobileNumber')?.errors?.['required']">Mobile number is required.</span>
+											<span *ngIf="formGroup.get('mobileNumber')?.errors?.['invalidMobileNumber']">Invalid mobile number format.</span>
+										  </div>
+									</div>
+								</div>
+								
+								<button id="" class="submitBtn" type="submit" [disabled]="formGroup.invalid"  >Submit</button>
+								
+							
+							</form>
+							
+							</div>
+                     </div>
+
+
+	    </div>
+  </div>
+</body>
+
+	
+<app-user-footer></app-user-footer>
+
+
+
+
+
+ 
+<div class="popup" [ngClass]="{'show': showPopup}"  #popupContent>
+<button  class="btn btn-danger" (click)="closePopup()">✖️</button>
+<div class="popup-content" >
+
+	
+	
+	<div class="print" #print>
+   <div class="row">
+
+
+	<div class="container">
+	<img src="assets/images/Nc pc logo .png"  class="logo">
+	<h5 style="text-align:center;"> gampaha</h5>
+	<h5 style="text-align:center;">077 844 0286</h5>
+	</div>
+  
+	<hr>
+  
+	 <div class="col-xl-6">
+ 		 <h4>invoice : {{ orderData?.id }}</h4>
+  		 <p> {{ orderData?.name }}</p>
+  		 <p>Date :- {{ orderData?.createdDate }}</p>
+  		 <p>Time :- {{ orderData?.createdTime }}</p>
+  	 </div>
+  
+  <div class="col-xl-6">
+  <table>
+	<tr>
+	<td>product</td>
+	<td>price</td>
+	<td>qunity</td>
+	<td> subtotal </td>
+  </tr>
+  <tr *ngFor="let product of orderData?.products">
+	<td>{{ product?.name }}</td>
+	<td> {{ product?.price }}</td>
+	<td> {{ product?.qnt}}</td>
+	<td> {{product?.price * product?.qnt}} </td>
+  </tr>
+  
+</table>
+</div>
+
+  </div>  
+
+  <br>
+
+  <div class="row">
+  <h5> full price : Rs {{ getTotalPrice() }}</h5>
+  <h5>  delivery chargers : Rs 550 </h5>
+  <br><br>
+  <h4> total price : Rs {{ getTotalPrice() + 550}}</h4>
+  
+  <hr>
+  <br>
+  <p style="text-align: center;"> Thanks you for shopping with us !</p>
+  <p style="text-align: center;"> If you want to cancel this order, give a phone call within 24 hours</p>
+  </div>
+  
+ 
+
+</div>
+
+</div>
+</div>
+

@@ -1,0 +1,78 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-xl-12">
+
+          <br><br><br><br><br>
+        <div class="bill" #popupContent>
+          
+         
+
+        
+
+          <img src="assets/images/Nc pc logo .png" class="titleimg">
+
+          
+          <hr>
+          <br>
+          
+
+         <h5>INVOICE NO : {{bill.id}}</h5>
+         <h6> customer name : {{bill.name}} </h6>
+         <h6> customer nic : {{bill.nic}} </h6>
+         <h6> customer email : {{bill.email}}</h6>
+         <h6>Date : {{bill.createdDate}}</h6>
+         <h6>time : {{bill.createdTime}}</h6>
+
+    <hr>   
+         <h5 class="wadana"> Thank for puchesing </h5>
+         <br>
+
+        <table>
+          <tr>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Item quntity</th>
+            <th>Sub total</th>
+          </tr>
+
+          <tr *ngFor="let product of bill.products">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.qnt}}</td>
+            <td>{{product.price * product.qnt}}</td>
+          </tr>
+          <br>
+
+
+          <tr>
+            <td colspan="3" class="text-right">Total Subtotal:</td>
+            <td>Rs {{ calculateTotalSubtotal() }}</td>
+          </tr>
+
+          <tr>
+            <td colspan="3" class="text-right">Deliver chargers:</td>
+            <td>Rs 550 </td>
+          </tr>
+          <br>
+          <tr>
+            <td colspan="3" class="text-right">Full Payment:</td>
+            <td>Rs {{ calculateTotalSubtotal() + 550}} </td>
+          </tr>
+
+        </table>
+
+
+        <h6 class="finishing">Nc Pc House <br>No 206/7/A Mahara Gampola, Gampola, Sri Lanka</h6>
+
+          </div>
+          
+        </div>
+        
+
+  
+
+    </div>
+</div>
+<br><br><br><br>

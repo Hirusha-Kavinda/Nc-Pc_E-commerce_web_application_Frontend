@@ -1,0 +1,374 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html,
+body {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Quicksand", sans-serif;
+font-size: 62.5%;
+font-size: 10px;
+}
+
+/* Navbar section */
+.nav {
+left: 0px;
+width: 100%;
+height: 80px;
+position: fixed;
+line-height: 80px;
+text-align: center;
+background: #000;
+opacity: 80%;
+z-index: 999; /* Ensures navbar is on top of other elements */
+}
+
+.nav div.logo {
+float: left;
+width: auto;
+height: auto;
+padding-right: 40px;
+}
+
+.nav div.logo a {
+text-decoration: none;
+color: #fff;
+font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+color: #00d9ff;
+}
+
+.nav div.main_list {
+height: 65px;
+float: right;
+}
+
+.nav div.main_list ul {
+width: 100%;
+height: 65px;
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav div.main_list ul li {
+width: auto;
+height: 65px;
+padding: 0;
+padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+text-decoration: none;
+color: #fff;
+line-height: 65px;
+font-size: 20px;
+}
+
+.nav div.main_list ul li a:hover {
+color: #41d0ff;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+.nav div.logo {
+padding: 0;
+}
+
+.nav div.main_list {
+width: 100%;
+height: auto;
+position: absolute;
+background: #000;
+opacity: 90%;
+top: 80px;
+left: -100%;
+transition: all 0.5s;
+}
+
+.nav div.showing {
+left: 0;
+}
+
+.nav div.main_list ul {
+flex-direction: column;
+width: 100%;
+height: auto;
+margin: 0;
+padding: 0;
+display: none;
+}
+
+.nav div.main_list ul li {
+width: 100%;
+text-align: right;
+padding: 2rem;
+}
+
+.nav div.media_button {
+display: block;
+height: 80px;
+width: 80px;
+position: absolute;
+top: 0;
+right: 0;
+cursor: pointer;
+z-index: 1;
+}
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+.nav div.main_list {
+top: 60px;
+
+}
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+.nav div.main_list {
+top: 80px;
+}
+}
+
+
+
+/* fb button css*/
+
+.fb_shadow__btn {
+   margin-top: 25px;
+   height: 40px;
+   position: absolute;
+   padding: 20px 20px;
+   border: none;
+   font-size: 17px;
+   color: #fff;
+   border-radius: 50px;
+   text-transform: uppercase;
+   transition: 0.5s;
+   transition-property: box-shadow;
+   left: 17%}
+ 
+ .fb_shadow__btn {
+   background: rgba(0, 140, 255, 0);
+   box-shadow: 0 0 15px rgb(0,140,255); }
+ 
+ .fb_shadow__btn:hover {
+   box-shadow: 0 0 5px rgb(0,140,255),
+               0 0 10px rgb(0,140,255),
+               0 0 15px rgb(0,140,255),
+               0 0 20px rgb(0,140,255); }
+
+
+
+               
+   /* cl button css*/
+
+
+
+
+
+
+ .fa {
+   position: absolute;
+   font-size: 20px;
+   right: 14px;
+   top: 12px;
+   color: #ffffff;
+   
+ }
+
+ .fa:hover{
+   color: #00d9ff;
+ }
+
+
+
+ .button-container {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   left: 21%;
+ }
+ .cl_shadow__btn {
+   margin-top: 88px;
+   height: 40px;
+   position: absolute;
+   padding: 20px 20px;
+   border: none;
+   font-size: 17px;
+   color: #fff;
+   border-radius: 50px;
+   text-transform: uppercase;
+   transition: 0.5s;
+   transition-property: box-shadow;
+   left: 6px}
+
+   .cl_shadow__btn {
+       background: rgba(0, 140, 255, 0);
+       box-shadow: 0 0 15px rgb(0,140,255); }
+     
+   .cl_shadow__btn:hover {
+       box-shadow: 0 0 5px rgb(0,140,255),
+                   0 0 10px rgb(0,140,255),
+                   0 0 15px rgb(0,140,255),
+                   0 0 20px rgb(0,140,255); }
+   
+   .phonecss{ position: absolute;
+       left: 13px;
+
+                   }
+
+
+   .phoneNum{
+       color: #ffffff;
+       position: absolute;
+       font-size: 22px;
+       left: 70px;
+       top: 5px;
+     
+
+}
+
+
+
+
+
+
+
+
+
+
+
+             /* cart */
+              .cart {
+               left: 90%;
+               --glow-color: rgb(0, 137, 235);
+               --glow-spread-color: rgba(0, 170, 255, 0.01);
+               --enhanced-glow-color: rgb(0, 108, 255);
+               --btn-color: rgba(61, 136, 136, 0.098);
+               border: .1px solid #fff;
+               padding: 1px 3px;
+               color: #ffffff;
+               font-size: 15px;
+               font-weight: bold;
+               background-color: var(--btn-color);
+               border-radius: 1em;
+               outline: none;
+               box-shadow: 0 0 1px .1px #00d9ff,
+                      0 0 15px 4px var(--glow-spread-color),
+                      inset 0 0 .75em .25em var(--glow-color);
+               text-shadow: 0 0 .5em var(--glow-color);
+               position: absolute;
+               transition: all 0.3s;
+               top: 22px;
+               height: 40px;
+               width: 80px;
+               
+
+               display: flex;
+               justify-content: center;
+               align-items: center;
+              }
+              
+              .cart::after {
+               pointer-events: none;
+               content: "";
+               position: absolute;
+               top: 120%;
+               left: 0;
+               height: 100%;
+               width: 100%;
+               background-color: var(--glow-spread-color);
+               filter: blur(2em);
+               opacity: .7;
+               transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+              }
+              
+              .cart:hover {
+               color: #ffffff;
+               background-color: #00d9ff3b;
+               box-shadow: 0 0 1px .25px var(--glow-color),
+                      0 0 4px 2px var(--glow-spread-color),
+                      inset 0 0 .75em .25em var(--glow-color);
+              }
+              
+              .cart:active {
+               box-shadow: 0 0 0.6em .25em var(--glow-color),
+                      0 0 2.5em 2em var(--glow-spread-color),
+                      inset 0 0 .5em .25em var(--glow-color);
+              }
+
+
+
+
+              
+/* home button css*/
+
+.home_shadow__btn {
+ margin-top: 25px;
+ height: 40px;
+ position: absolute;
+ padding: 20px 20px;
+ border: none;
+ font-size: 17px;
+ color: #fff;
+ border-radius: 50px;
+ text-transform: uppercase;
+ transition: 0.5s;
+ transition-property: box-shadow;
+ right : 15%; }
+
+.home_shadow__btn {
+ background: rgba(0, 140, 255, 0);
+ box-shadow: 0 0 15px rgb(0,140,255); }
+
+.home_shadow__btn:hover {
+ box-shadow: 0 0 5px rgb(0,140,255),
+             0 0 10px rgb(0,140,255),
+             0 0 15px rgb(0,140,255),
+             0 0 20px rgb(0,140,255); }
+
+.home {
+ right: 11px;
+ font-size: 20px;
+ top: 10px;
+}
+
+
+/*about button*/
+
+.about_shadow__btn {
+ margin-top: 25px;
+ height: 40px;
+ position: absolute;
+ padding: 20px 20px;
+ border: none;
+ font-size: 17px;
+ color: #fff;
+ border-radius: 50px;
+ text-transform: uppercase;
+ transition: 0.5s;
+ transition-property: box-shadow;
+ right : 20%; }
+
+.about_shadow__btn {
+ background: rgba(0, 140, 255, 0);
+ box-shadow: 0 0 15px rgb(0,140,255); }
+
+.about_shadow__btn:hover {
+ box-shadow: 0 0 5px rgb(0,140,255),
+             0 0 10px rgb(0,140,255),
+             0 0 15px rgb(0,140,255),
+             0 0 20px rgb(0,140,255); }
+
+.about {
+ position: absolute;
+ right: 11px;
+ font-size: 20px;
+ top: 10px;
+}

@@ -1,0 +1,298 @@
+
+ body {
+  background-image: url('https://wallpapertag.com/wallpaper/middle/3/7/6/174164-download-free-dark-grey-background-1920x1080-computer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 900px;
+}
+ 
+
+.error-message {
+  color: rgb(255, 0, 0);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.error-text {
+  display: block;
+  margin-top: 5px;
+}
+
+.error-input .input {
+  border: 1px solid red;
+}
+
+
+/* form card*/
+.card {
+    
+    background-image: linear-gradient(163deg, #00ffee 0%, #0099ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+    left: 30%;
+    width: 90%;
+  
+   }
+   
+   .card2 {
+   
+    background-image: linear-gradient(163deg, #4c4c4fdf 0%, #323030 100%);
+    border-radius: 20px;
+    transition: all .2s;
+    padding-left: 50px;
+   
+   }
+   
+   .card2:hover {
+    transform: scale(0.995);
+    border-radius: 20px;
+   }
+   
+   .card:hover {
+    box-shadow: 0px 0px 30px 1px rgb(0, 242, 255);
+   }
+
+
+
+
+
+
+     /*input items*/
+
+   .title{
+    color: aliceblue;
+    padding-left: 25%;
+    
+   }
+
+   .lable{
+    
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 10px;
+	margin-top: 15px;
+}
+
+.input {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	color: #fff;
+	background-color: rgb(28,28,30);
+	box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+	border-radius: 0.4vw;
+	border: none;
+	outline: none;
+	padding: 0.4vw;
+	width: 530px;
+	height: 50px;
+	transition: .4s;
+	
+  }
+  
+  .input:hover {
+	box-shadow: 0 0 0 .15vw rgb(0, 183, 255);
+	
+	
+  }
+  
+  .input:focus {
+	box-shadow: 0 0 0 .15vw rgb(2, 133, 199);
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+	  -webkit-text-fill-color: #fff;
+	  transition: background-color 5000s ease-in-out 0s;
+  }
+
+
+
+
+   /*submit btn*/
+
+
+   
+.submitBtn.disabled {
+  /* Styles for disabled state */
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+ .submitBtn:hover {
+
+  color: red;
+  background-color: #323030;
+  box-shadow: 1px 1px 10px #000000 inset;
+  border: 2px solid #fe0000;
+ }
+
+  .submitBtn{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    box-shadow: 1px 1px 10px #008cfe inset;
+    color: #01d5ff;
+    border: 2px solid #0087fe;
+    border-radius: 5px;
+    padding: 10px 12px;
+    background: transparent;
+  }
+  
+  
+  .submitBtn:not([disabled]):hover {
+    box-shadow: 2px 2px 15px #00ffff inset;
+    color: rgb(255, 255, 255);
+    border: 2px solid #00e0fe;
+  }
+  
+  .submitBtn:not([disabled]):active {
+    box-shadow: 2px 2px 20px #00eeff inset;
+  
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+  /*   pop up invoice */
+  .popup-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .popup.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup-content {
+    max-width: 800px;
+    min-width: 600px;
+    animation: fade-in 0.3s ease;
+  }
+  
+  .popup button {
+    margin-top: 10px;
+  }
+  
+  td {
+    width: 40%;
+    text-align: center;
+  }
+  
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 80px;
+    width: 200px;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
+
+  [data-aos="fade-down"] {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
+    }
+    
+    [data-aos="fade-down"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* bill for */
+
+  

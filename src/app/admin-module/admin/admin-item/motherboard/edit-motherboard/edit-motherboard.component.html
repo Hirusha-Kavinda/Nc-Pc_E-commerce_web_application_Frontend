@@ -1,0 +1,32 @@
+<br><br><br><br>
+
+ <div class="col-md-6 offset-sm-3" data-aos="fade-down">
+    <div class="card">
+    <div class="card2">
+    
+    <form class="form" (ngSubmit) ="onSubmit()">
+        <br>
+
+ <h3 class="title">UPDATE MOTHERBOARD DETAILS</h3>
+
+
+ <p> Name</p>
+ <input type="text" name="name" [(ngModel)] = "motherboard.name"  class="input" placeholder="Enter the name">
+
+ <p> Price</p>
+ <input type="text" name="price" [(ngModel)] = "motherboard.price" class="input" placeholder="Enter the price">
+
+ <p> Details</p>
+ <textarea name="details" [(ngModel)] = "motherboard.details" class="input" placeholder="Enter the details" rows="5"></textarea>
+
+ <p>Image Url</p>
+ <textarea name="imageUrl" [(ngModel)] = "motherboard.imageUrl" class="input" placeholder="Enter the image Url" rows="5"></textarea>
+
+ <button class="button" type="submit" (click)="alertWithsuccess()" > Submit</button>
+    </form>
+    </div>
+    </div>
+ </div>
+
+ <br><br><br><br><br>
+ 

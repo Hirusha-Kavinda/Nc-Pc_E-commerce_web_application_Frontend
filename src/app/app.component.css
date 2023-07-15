@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    /* Optional: Adjust the alignment of the row */
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 1200px; /* Adjust the spacing between the input boxes */
+  }
+  
+  .input-wrapper {
+    flex: 1;
+  }
+  
+  .input-wrapper label {
+    display: block;
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+  }

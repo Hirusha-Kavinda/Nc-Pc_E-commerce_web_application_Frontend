@@ -1,0 +1,27 @@
+<nav class="nav">
+    
+    <div class="logo">
+        <a href="#"><img src="assets/images/Nc pc logo .png" height="80px"></a>
+    </div>
+    <a href="https://www.facebook.com/ncpccollection">
+    <button class="fb_shadow__btn" type="button"> <i class="fa fa-facebook" aria-hidden="true"></i></button></a>
+
+    <div class="button-container" (mouseenter)="showNumber = true" (mouseleave)="showNumber = false">
+        <button class="cl_shadow__btn"><i class="fa fa-phone phonecss" aria-hidden="true"></i></button>
+        <span class="phoneNum" *ngIf="showNumber">{{ phoneNo}}</span>
+      </div>
+
+      <a href="#">
+        <button class="about_shadow__btn"> <i class="fa fa-info-circle about" aria-hidden="true"></i></button></a>
+
+      <a href="#">
+        <button class="home_shadow__btn"> <i class="fa fa-home home" aria-hidden="true"></i></button></a>
+    
+     
+      <button class="cart" (click)="navigateCart()"><i class="fa fa-shopping-cart" aria-hidden="true"> | {{cartItem}}</i></button> 
+
+
+
+
+
+</nav>

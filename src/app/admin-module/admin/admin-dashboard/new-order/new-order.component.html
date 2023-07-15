@@ -1,0 +1,83 @@
+<div *ngIf="filteredItems && filteredItems.length === 0" class= "container">
+    <br><br><br><br><br>
+    <img src="assets/images/neworder.png" class="neworderimage">
+    
+    <br><br>
+
+    <h1>New Orders Not Yet</h1>
+</div>
+
+
+
+
+
+
+
+
+
+<div>
+    <br><br><br><br>
+    <h1>NEW ORDERS</h1>
+    <br>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="card" *ngFor="let item of filteredItems" data-aos="fade-right"  >
+        <div class="card-details" >
+        
+        <div class ="row" >
+    
+          <div class="col-xl-2">
+            <h4 class="invoiceNo"> Invoice No {{item.id}}</h4>
+            <br>
+            <h6>{{item.createdDate}}</h6>
+            <h6>{{item.createdTime}}</h6>
+          
+          </div>
+    
+         
+    
+        <div class="col-xl-5">
+            <h6>name &nbsp;&nbsp; : &nbsp;{{item.name}}</h6>
+            <h6>address :&nbsp; {{item.address}} </h6>
+            <h6>nic no  &nbsp;&nbsp; :&nbsp; {{item.nic}} </h6>
+            <h6>email &nbsp;&nbsp;&nbsp; :&nbsp; {{item.email}}</h6>
+            <h6>phone no :&nbsp; {{item.phoneNumber}}</h6>
+        </div>
+    
+        <div class="col-xl-5">
+            <table style="border: 1px solid;">
+                <tr>
+                <th>Items </th>
+                <th>Quntity</th>
+                <th>price</th>
+                <th>SubTotal</th>
+                </tr>
+                <tr *ngFor="let product of item.products">
+                    <td>{{product.name}}</td>
+                    <td> {{product.qnt}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.qnt * product.price}}</td>
+    
+                </tr>
+               
+            </table>
+            
+        </div>
+    
+        <div class="row under">
+        <div class="col-xl-8">
+            <h3>Total price : Rs {{ calculateTotalPriceById(item.id) }}</h3>
+        </div> 
+        <div class="col-xl-4">
+            <h3>  <p>{{item.states}} order</p></h3>
+        </div> 
+    </div>
+        </div>
+    </div>
+       <button class="card-button" (click)="confirmNotify(item.id)"><i class="fa fa-check-square-o" aria-hidden="true"></i> &nbsp; CONFIRM ORDER</button> 
+       <button class="car-button" (click)="cancleNotify(item.id)"><i class="fa fa-times-circle" aria-hidden="true"></i> &nbsp; CANCLE ORDER</button> 
+       
+    </div>
+    
+    <br><br>
+    
+</div>

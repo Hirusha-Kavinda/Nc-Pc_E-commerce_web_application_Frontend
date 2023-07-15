@@ -1,0 +1,153 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+body {
+  	background-color:#333;
+  	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+}
+
+
+p{
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 1px;
+	margin-top: 15px;
+}
+
+.input {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	color: #fff;
+	background-color: rgb(28,28,30);
+	box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+	border-radius: 0.4vw;
+	border: none;
+	outline: none;
+	padding: 0.4vw;
+	width: 100%;
+	height: 50px;
+	transition: .4s;
+	
+  }
+  
+  .input:hover {
+	box-shadow: 0 0 0 .15vw rgb(0, 183, 255);
+	
+	
+  }
+  
+  .input:focus {
+	box-shadow: 0 0 0 .15vw rgb(2, 133, 199);
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+	  -webkit-text-fill-color: #fff;
+	  transition: background-color 5000s ease-in-out 0s;
+  }
+
+  
+
+/* button */
+.button {
+	width: 150px;
+	color: #07e2ff;
+	border: 2px solid #00fbfb;
+	border-radius: 10px;
+	padding: 10px 25px;
+	background: transparent;
+  }
+  
+  .button:hover {
+	color: #fff;
+	box-shadow: 2px 2px 35px #00ff55 inset;
+  }
+  
+  .button:active {
+	box-shadow: 2px 2px 20px #07f7ff inset;
+  }
+  
+
+
+
+
+
+
+
+/* form design*/
+
+
+.title{
+	text-align: center;
+	color: aliceblue;
+	
+}
+ .card {
+	background-image: linear-gradient( #0091ff 0%, #00d0ff 100%);
+	border-radius: 22px;
+	transition: all .3s;
+  } 
+  
+  .card2 {
+	border-radius: 50px;
+	transition: all .2s;
+  }
+  
+  .card2:hover {
+	transform: scale(0.999);
+	border-radius: 20px;
+  }
+  
+  .card:hover {
+	box-shadow: 0px 0px 30px 1px rgb(0, 195, 255);
+  }
+
+  .form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 20px;
+	background-color: #282727;
+	border-radius: 20px;
+  }
+
+  .error-message {
+    color: rgb(255, 8, 0);
+}
+
+.invalid-input input,
+.invalid-input textarea {
+    border-color: red;
+}
+
+.invalid-button:hover {
+    background-color: red;
+    color: white;
+    border: #ff0000;
+}
+
+.error-input {
+    border-color: red;
+    color: red;
+}
+
+
+[data-aos="fade-down"] {
+	opacity: 0;
+	transform: translateY(-50px);
+	transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  [data-aos="fade-down"].aos-animate {
+	opacity: 1;
+	transform: translateY(0);
+  }

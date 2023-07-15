@@ -1,0 +1,35 @@
+<br><br><br><br>
+
+ <div class="col-md-6 offset-sm-3" data-aos="fade-down">
+    <div class="card">
+    <div class="card2">
+    
+      <form class="form" [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+         <br>
+         <h3 class="title">UPDATE SPEACKER HEADSETS</h3>
+         
+         <p> Name</p>
+         <input type="text" name="name" formControlName="name" [(ngModel)]="spec.name" class="input" placeholder="Enter the name">
+         <div *ngIf="itemForm.get('name')?.errors?.['required'] && itemForm.get('name')?.touched" class="error-message">Name is required.</div>
+         
+         <p> Price</p>
+         <input type="text" name="price" formControlName="price" [(ngModel)]="spec.price" class="input" placeholder="Enter the price">
+         <div *ngIf="itemForm.get('price')?.errors?.['required'] && itemForm.get('price')?.touched" class="error-message">Price is required.</div>
+         
+         <p> Details</p>
+         <textarea name="details" formControlName="details" [(ngModel)]="spec.details" class="input" placeholder="Enter the details" rows="5"></textarea>
+         <div *ngIf="itemForm.get('details')?.errors?.['required'] && itemForm.get('details')?.touched" class="error-message">Details are required.</div>
+         
+         <p>Image Url</p>
+         <textarea name="imageUrl" formControlName="imageUrl" [(ngModel)]="spec.imageUrl" class="input" placeholder="Enter the image Url" rows="5"></textarea>
+         <div *ngIf="itemForm.get('imageUrl')?.errors?.['required'] && itemForm.get('imageUrl')?.touched" class="error-message">imageUrl is required.</div>
+         
+         <button class="button" type="submit" [disabled]="itemForm.invalid" [ngClass]="{ 'invalid-button': itemForm.invalid }" (click)="alertWithsuccess()">Submit</button>
+       </form>
+    </div>
+    </div>
+ </div>
+
+ <br><br><br><br><br>
+ 
+

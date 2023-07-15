@@ -1,0 +1,226 @@
+
+
+body{
+   margin-top:20px;
+   background: #eef5f953;
+ }
+ .card {
+   margin-bottom: 20px;
+   
+ }
+ 
+ .card {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   min-width: 0;
+   word-wrap: break-word;
+   background-image:  linear-gradient(to bottom right, #000000, #000000c1);
+   background-clip: border-box;
+   border: 0 solid transparent;
+   border-radius: 10%;
+ }
+ .el-element-overlay .white-box {
+    padding: 0
+ }
+ 
+ .el-element-overlay .el-card-item {
+    position: relative;
+    padding-bottom: 20px
+ }
+ 
+ .el-element-overlay .el-card-item .el-card-avatar {
+   height: 200px;
+   inline-size: 100%;
+    margin-bottom: 20px
+ }
+ 
+ .el-element-overlay .el-card-item .el-card-content {
+    text-align: center
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1 {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1 img {
+    display: block;
+    position: relative;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10%;
+ }
+ 
+ 
+ 
+ .el-element-overlay .el-card-item .el-overlay-1:hover img {
+   -ms-transform: scale(1.2) translateZ(0);
+   -webkit-transform: scale(1.2) translateZ(0);
+   transform: scale(1.2) translateZ(0);
+ }
+ 
+ 
+  
+ .el-element-overlay .el-card-item .el-overlay-1 .el-info {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: transparent;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    padding: 0;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%) translateZ(0);
+    -webkit-transform: translateY(-50%) translateZ(0);
+    -ms-transform: translateY(-50%) translateZ(0)
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1 .el-info .el-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 3px
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1 .el-info .el-item .el-link {
+    border-color: #ffffff;
+    color: #ffffff;
+    padding: 12px 15px 10px
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1 .el-info .el-item .el-link:hover {
+    background: #00eeff;
+    border-color: #00eeff;
+    
+ }
+ 
+ .gmaps-overlay_arrow.above,
+ .gmaps-overlay_arrow.below {
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.811);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1:hover .el-overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0)
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1 .scrl-dwn {
+    top: -100%
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1 .scrl-up {
+    top: 100%;
+    height: 0
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1:hover .scrl-dwn {
+    top: 0
+ }
+ 
+ .el-element-overlay .el-card-item .el-overlay-1:hover .scrl-up {
+    top: 0;
+    height: 100%
+ }
+ 
+ 
+  .name{
+   color: #00eeff;
+  }
+  .price{
+   color: #ffffff;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 25px;
+  }
+ 
+  .fa{
+   font-size: 15px;
+  }
+  .fa:hover {
+   color: rgb(0, 0, 0);
+ }
+ 
+ .quntity{
+  
+   font-size: 25px;
+   color: #ffffff;
+   margin-left: 20px;
+   margin-right: 20px;
+ 
+   
+  
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* add cart button*/
+ 
+ 
+ .btn{
+   margin-top: 20px;
+   font-weight: 1000;
+   color: #ffffff;
+ }
+ 
+ 
+ 
+ 
+ 
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

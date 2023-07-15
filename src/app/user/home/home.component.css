@@ -1,0 +1,569 @@
+.background-image {
+  background-image: url('https://cdna.artstation.com/p/assets/images/images/033/246/402/large/evil-chen-2.jpg');
+
+/* */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100% ;
+  height: 1000px;
+ 
+
+  
+  
+  } 
+
+
+
+
+
+    /* motivation talk animation*/
+
+     
+     body {
+      height: 100vh;
+      display:contents;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+    } 
+     
+    h1 {
+      
+      opacity: 80%;
+      text-shadow: 2px 5px 8px black;
+      color: aliceblue;
+      font-family: "Montserrat Medium";
+      max-width: 800px;
+      text-align: center;
+      transform: scale(0.94);
+      animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    } 
+
+    @keyframes scale {
+      100% {
+        transform: scale(1);
+      }
+    }
+
+
+  span {
+      position: relative;
+      opacity: 0;
+      filter: blur(4px);
+      font-size: 60px;
+      font-family: sans-serif;
+      top : 80px;
+      left: 50%;
+      text-align : center;
+    }
+    
+     span:nth-child(1) {
+      animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(2) {
+      animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(3) {
+      animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(4) {
+      animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(5) {
+      animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(6) {
+      animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+    
+    span:nth-child(7) {
+        animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
+    
+    
+    @keyframes fade-in {
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* animation card css */
+
+.animationCard{
+  position: relative;
+  top : 32%;
+ 
+ }
+ .container {
+     position: relative;
+     width: 300px;
+     height: 90px;
+     transition: 200ms;
+   }
+   
+   .container:active {
+     width: 180px;
+     height: 245px;
+   }
+   
+   #card {
+     position: absolute;
+     inset: 0;
+     z-index: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 20px;
+     transition: 700ms;
+     background: linear-gradient(43deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.373) 46%, rgb(0, 0, 0) 100%);
+   }
+   
+   .subtitle {
+     transform: translateY(160px);
+     color: rgba(6, 189, 255, 0.349);
+     text-align: center;
+     width: 100%;
+   }
+   
+   .title {
+    text-shadow: 2px 2px 3px black;
+    color: aliceblue;
+     opacity: 0;
+     transition-duration: 300ms;
+     transition-timing-function: ease-in-out-out;
+     transition-delay: 100ms;
+     position: absolute;
+     font-size: 20px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+   }
+   
+   .tracker:hover ~ #card .title {
+     opacity: 1;
+   }
+   
+   #prompt {
+     bottom: 8px;
+     text-align: center;
+     z-index: 20;
+     font-size: 20px;
+     font-weight: bold;
+     transition: 300ms ease-in-out-out;
+     position: absolute;
+     max-width: 110px;
+     color: rgb(255, 255, 255);
+   }
+   
+   .tracker {
+     position: absolute;
+     z-index: 200;
+     width: 100%;
+     height: 100%;
+   }
+   
+   .tracker:hover {
+     cursor: pointer;
+   }
+   
+   .tracker:hover ~ #card #prompt {
+     opacity: 0;
+   }
+   
+   .tracker:hover ~ #card {
+     transition: 300ms;
+     filter: brightness(1.1);
+   }
+   
+   .container:hover #card::before {
+     transition: 200ms;
+     content: '';
+     opacity: 80%;
+   }
+   
+   .canvas {
+     perspective: 800px;
+     inset: 0;
+     z-index: 200;
+     position: absolute;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+     gap: 0px 0px;
+     grid-template-areas: "tr-1 tr-2 tr-3 tr-4 tr-5"
+       "tr-6 tr-7 tr-8 tr-9 tr-10"
+       "tr-11 tr-12 tr-13 tr-14 tr-15"
+       "tr-16 tr-17 tr-18 tr-19 tr-20"
+       "tr-21 tr-22 tr-23 tr-24 tr-25";
+   }
+   
+   #card::before {
+     content: '';
+     background: linear-gradient(43deg, rgba(0, 225, 255, 0.423) 0%, rgba(59, 161, 250, 0.556) 46%, rgba(0, 255, 229, 0.493) 100%);
+     filter: blur(2rem);
+     opacity: 30%;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     z-index: -1;
+     transition: 200ms;
+   }
+   
+   .tr-1 {
+     grid-area: tr-1;
+   }
+   
+   .tr-2 {
+     grid-area: tr-2;
+   }
+   
+   .tr-3 {
+     grid-area: tr-3;
+   }
+   
+   .tr-4 {
+     grid-area: tr-4;
+   }
+   
+   .tr-5 {
+     grid-area: tr-5;
+   }
+   
+   .tr-6 {
+     grid-area: tr-6;
+   }
+   
+   .tr-7 {
+     grid-area: tr-7;
+   }
+   
+   .tr-8 {
+     grid-area: tr-8;
+   }
+   
+   .tr-9 {
+     grid-area: tr-9;
+   }
+   
+   .tr-10 {
+     grid-area: tr-10;
+   }
+   
+   .tr-11 {
+     grid-area: tr-11;
+   }
+   
+   .tr-12 {
+     grid-area: tr-12;
+   }
+   
+   .tr-13 {
+     grid-area: tr-13;
+   }
+   
+   .tr-14 {
+     grid-area: tr-14;
+   }
+   
+   .tr-15 {
+     grid-area: tr-15;
+   }
+   
+   .tr-16 {
+     grid-area: tr-16;
+   }
+   
+   .tr-17 {
+     grid-area: tr-17;
+   }
+   
+   .tr-18 {
+     grid-area: tr-18;
+   }
+   
+   .tr-19 {
+     grid-area: tr-19;
+   }
+   
+   .tr-20 {
+     grid-area: tr-20;
+   }
+   
+   .tr-21 {
+     grid-area: tr-21;
+   }
+   
+   .tr-22 {
+     grid-area: tr-22;
+   }
+   
+   .tr-23 {
+     grid-area: tr-23;
+   }
+   
+   .tr-24 {
+     grid-area: tr-24;
+   }
+   
+   .tr-25 {
+     grid-area: tr-25;
+   }
+   
+   .tr-1:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+   }
+   
+   .tr-2:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+   }
+   
+   .tr-3:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+   }
+   
+   .tr-4:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+   }
+   
+   .tr-5:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+   }
+   
+   .tr-6:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+   }
+   
+   .tr-7:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+   }
+   
+   .tr-8:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+   }
+   
+   .tr-9:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+   }
+   
+   .tr-10:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+   }
+   
+   .tr-11:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+   }
+   
+   .tr-12:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+   }
+   
+   .tr-13:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+   }
+   
+   .tr-14:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+   }
+   
+   .tr-15:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+   }
+   
+   .tr-16:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+   }
+   
+   .tr-17:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+   }
+   
+   .tr-18:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+   }
+   
+   .tr-19:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+   }
+   
+   .tr-20:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+   }
+   
+   .tr-21:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+   }
+   
+   .tr-22:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+   }
+   
+   .tr-23:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+   }
+   
+   .tr-24:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+   }
+   
+   .tr-25:hover ~ #card {
+     transition: 125ms ease-in-out;
+     transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+   }
+   
+   .noselect {
+     -webkit-touch-callout: none;
+      /* iOS Safari */
+     -webkit-user-select: none;
+      /* Safari */
+      /* Konqueror HTML */
+     -moz-user-select: none;
+      /* Old versions of Firefox */
+     -ms-user-select: none;
+      /* Internet Explorer/Edge */
+     user-select: none;
+      /* Non-prefixed version, currently
+                                       supported by Chrome, Edge, Opera and Firefox */
+   }
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* button */
+
+button {
+  width: 250px;
+  height: 100px;
+
+  --glow-color: rgb(0, 225, 255);
+  --glow-spread-color: rgba(0, 208, 255, 0.47);
+  --enhanced-glow-color: rgb(25, 0, 255);
+  --btn-color: rgba(9, 6, 106, 0.418);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 20px;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 1px 1px 1px black;
+  position: relative;
+  transition: all 0.3s;
+  top : 150px;
+ }
+ 
+ button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ button:hover {
+  
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }

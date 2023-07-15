@@ -1,0 +1,28 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<br><br><br><br>
+<div class="container-fluid">
+<div class="row el-element-overlay">
+
+                        <div class="col-lg-3 col-md-6" *ngFor=" let motherboard of MotherboardUser" >
+                            <div class="card" data-aos="fade-up">
+                                <div class="el-card-item">
+                                    <div class="el-card-avatar el-overlay-1"> <img src="{{motherboard .imageUrl}}" alt="user" >
+                                        <div class="el-overlay">
+                                            <ul class="list-style-none el-info">
+                                              
+                                                <li class="el-item"><a class="btn default btn-outline image-popup-vertical-fit el-link" (click)="inc(motherboard )"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+                                                <li class="el-item"><b class="quntity" href="#">{{motherboard.qnt}}</b></li>
+                                                <li class="el-item"><a class="btn default btn-outline el-link" (click)="dec(motherboard )"><i class="fa fa-minus-circle" aria-hidden="true"></i></a></li>
+                                                <div><button type="button" class="btn btn-outline-info" (click)="addCart(motherboard )">Add to Cart</button></div>
+                                            </ul>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="el-card-content" (click)="MotherboardDetails(motherboard.id)">
+                                        <h6 class="name">{{motherboard.name}}</h6> <span class="price">Rs {{motherboard.price}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+</div>
+</div>

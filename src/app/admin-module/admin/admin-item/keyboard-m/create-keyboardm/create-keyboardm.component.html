@@ -1,0 +1,41 @@
+
+<br><br><br><br>
+<div class="col-md-6 offset-md-3" data-aos="fade-down">
+    <div class="card">
+    <div class="card2">
+    
+      <form class="form" [formGroup]="itemForm" (ngSubmit)="onSubmit()" >
+        <br>
+        <h3 class="title">ADD KEYBOARD & MOUSE</h3>
+    
+        <p> Name</p>
+        <input type="text" name="name" [(ngModel)]="keym.name" class="input" placeholder="Enter the name" formControlName="name" [ngClass]="{ 'error-input': itemForm.get('name')?.invalid && itemForm.get('name')?.touched }">
+        <div *ngIf="itemForm.get('name')?.errors?.['required'] && itemForm.get('name')?.touched" class="error-message">Name is required.</div>
+    
+        <p> Price</p>
+        <input type="number" name="price" [(ngModel)]="keym.price" class="input" placeholder="Enter the price" formControlName="price" [ngClass]="{ 'error-input': itemForm.get('price')?.invalid && itemForm.get('price')?.touched }">
+        <div *ngIf="itemForm.get('price')?.errors?.['required'] && itemForm.get('price')?.touched">
+            <small class="error-message">Price is required.</small>
+        </div>
+    
+        <p> Details</p>
+        <textarea name="details" [(ngModel)]="keym.details" class="input" placeholder="Enter the details" rows="5" formControlName="details" [ngClass]="{ 'error-input': itemForm.get('details')?.invalid && itemForm.get('details')?.touched }"></textarea>
+        <div *ngIf="itemForm.get('details')?.errors?.['required'] && itemForm.get('details')?.touched">
+            <small class="error-message">Details are required.</small>
+        </div>
+    
+        <p>Image Url</p>
+        <textarea name="imageUrl" [(ngModel)]="keym.imageUrl" class="input" placeholder="Enter the image Url" rows="5" formControlName="imageUrl" [ngClass]="{ 'error-input': itemForm.get('imageUrl')?.invalid && itemForm.get('imageUrl')?.touched }"></textarea>
+        <div *ngIf="itemForm.get('imageUrl')?.errors?.['required'] && itemForm.get('imageUrl')?.touched">
+            <small class="error-message">imageUrl is required.</small>
+        </div>
+    
+        <br>
+        <button class="button" type="submit" (click)="alertWithsuccess()" [ngClass]="{ 'invalid-button': itemForm.invalid }" [disabled]="itemForm.invalid">Submit</button>
+    </form>
+    
+    
+    </div>
+    </div>
+    </div>
+<br><br><br><br><br>

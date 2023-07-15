@@ -1,0 +1,59 @@
+<br><br><br><br>
+<h1 class="title">Total sales Income</h1>
+<br><br>
+<div class="container" data-aos="fade-up">
+     <div class="row">
+      
+
+         
+        <div class="col-xl-3"> 
+            <input class="input" name="startDate" placeholder="Start date..." type="date" [(ngModel)]="startDate" (input)="applyFilters()">    
+        </div>
+
+
+        <div class="col-xl-3"> 
+            <input class="input" name="endDate" placeholder="End date..." type="date" [(ngModel)]="endDate" (input)="applyFilters()"  >
+        </div>
+
+        <div class="col-xl-6 button-container">
+            <h3 class="tot">Total Income: &nbsp;Rs {{ calculateTotalIncome() }}</h3>
+            <br>
+            <button class="btn btn-success" (click)="exportToExcel()">Export to Excel</button>
+          </div>
+
+    </div>
+
+   
+
+    <br><br>
+
+    <div class="col-xl-10">
+
+        <table>
+
+            <tr>
+                <th> Name</th>
+                <th> Date</th>
+                <th> Price </th>
+                <th class="qnt"> quntity </th>
+                <th> sub total </th>
+            </tr>
+           
+            <tr *ngFor="let sells of filteredSells">
+                <td>{{sells.name}}</td>
+                <td>{{sells.date}}</td>
+                <td>{{sells.price}} </td>
+                <td class="qnts">{{ sells.qnt}}</td>
+                <td>{{sells.qnt * sells.price}}</td>
+            </tr>
+
+
+        </table>
+
+        <br><br>
+    </div>
+
+    </div> 
+
+
+
