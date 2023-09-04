@@ -89,6 +89,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            
+             "allowedCommonJsDependencies": [
+        "lodash"
+              ],
             "styles": [
               "src/styles.css",
               {
